@@ -1,0 +1,409 @@
+/* ─── VendorDashboard ─────────────────────────────────────────────────────── */
+
+.vd {
+    padding: 0;
+    background: #f5f6fa;
+    min-height: 100vh;
+    font-family: var(--font-poppins, 'Poppins', sans-serif);
+}
+
+/* ─── Body ────────────────────────────────────────────────────────────────── */
+.vd__body {
+    padding: 24px 32px 32px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+/* ─── Stat Cards Row ──────────────────────────────────────────────────────── */
+.vd__stats-row {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 18px;
+}
+
+.vd__stat-card {
+    background: #fff;
+    border-radius: 16px;
+    padding: 18px 20px;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #e8eaf0;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+    transition: box-shadow 0.2s, transform 0.15s;
+}
+
+.vd__stat-card:hover {
+    box-shadow: 0 4px 18px rgba(0, 0, 0, 0.08);
+    transform: translateY(-2px);
+}
+
+.vd__stat-card__header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 8px;
+}
+
+.vd__stat-card__icon-wrap {
+    width: 42px;
+    height: 42px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.vd__stat-card__label {
+    font-size: 13px;
+    color: #6b7280;
+    font-weight: 500;
+}
+
+.vd__stat-card__value {
+    font-size: 26px;
+    font-weight: 800;
+    color: #1a1a2e;
+    line-height: 1.1;
+    margin: 4px 0 0;
+}
+
+.vd__stat-card__link {
+    margin-top: 12px;
+    font-size: 12px;
+    color: #6b7280;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    text-decoration: none;
+    transition: color 0.15s;
+}
+
+.vd__stat-card__link:hover {
+    color: #FFC700;
+}
+
+/* ─── Middle Row ──────────────────────────────────────────────────────────── */
+.vd__middle-row {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr 1fr;
+    gap: 18px;
+}
+
+.vd__card {
+    background: #fff;
+    border-radius: 16px;
+    padding: 22px 20px;
+    border: 1px solid #e8eaf0;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+}
+
+.vd__card__title {
+    font-size: 14px;
+    font-weight: 700;
+    color: #1a1a2e;
+    margin: 0 0 18px;
+}
+
+/* ─── Portfolio Engagement ────────────────────────────────────────────────── */
+.vd__portfolio {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+}
+
+.vd__portfolio__chart-wrap {
+    position: relative;
+    width: 140px;
+    height: 140px;
+}
+
+.vd__portfolio__chart-center {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    pointer-events: none;
+}
+
+.vd__portfolio__chart-center-label {
+    font-size: 11px;
+    color: #6b7280;
+    font-weight: 500;
+}
+
+.vd__portfolio__chart-center-value {
+    font-size: 26px;
+    font-weight: 800;
+    color: #1a1a2e;
+    line-height: 1;
+}
+
+.vd__portfolio__legend {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+}
+
+.vd__portfolio__legend-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 13px;
+    color: #374151;
+}
+
+.vd__portfolio__legend-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    flex-shrink: 0;
+}
+
+.vd__portfolio__legend-label {
+    font-weight: 600;
+    color: #1a1a2e;
+}
+
+/* ─── Revenue Chart ───────────────────────────────────────────────────────── */
+.vd__revenue {
+    overflow: hidden;
+}
+
+.vd__revenue__chart {
+    width: 100%;
+    height: 160px;
+}
+
+/* ─── Project Status  ─────────────────────────────────────────────────────── */
+.vd__project-status {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.vd__project-status__chart-row {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.vd__project-status__pie {
+    flex-shrink: 0;
+}
+
+.vd__project-status__legend {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.vd__project-status__legend-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 12px;
+    color: #374151;
+}
+
+.vd__project-status__legend-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    flex-shrink: 0;
+}
+
+/* ─── Bottom Row ──────────────────────────────────────────────────────────── */
+.vd__bottom-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 18px;
+}
+
+/* ─── Notifications ───────────────────────────────────────────────────────── */
+.vd__notifications__list {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+}
+
+.vd__notifications__item {
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+    padding: 14px 0;
+    border-bottom: 1px solid #f3f4f6;
+}
+
+.vd__notifications__item:last-child {
+    border-bottom: none;
+}
+
+.vd__notifications__avatar {
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    background: #f3f4f6;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    font-size: 13px;
+    font-weight: 700;
+    color: #6b7280;
+}
+
+.vd__notifications__info {
+    flex: 1;
+    min-width: 0;
+}
+
+.vd__notifications__name {
+    font-size: 13px;
+    font-weight: 700;
+    color: #1a1a2e;
+}
+
+.vd__notifications__msg {
+    font-size: 12px;
+    color: #6b7280;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.vd__notifications__time {
+    font-size: 11px;
+    color: #9ca3af;
+    flex-shrink: 0;
+    margin-top: 2px;
+}
+
+/* ─── Project Engagement ──────────────────────────────────────────────────── */
+.vd__proj-engagement__cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 14px;
+}
+
+.vd__proj-engagement__card {
+    background: #f8f9fa;
+    border: 1px solid #e8eaf0;
+    border-radius: 14px;
+    padding: 18px 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    transition: box-shadow 0.18s, transform 0.15s;
+}
+
+.vd__proj-engagement__card:hover {
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.07);
+    transform: translateY(-2px);
+}
+
+.hfjdhhdh {
+    text-decoration: none;
+}
+
+.vd__proj-engagement__card-icon {
+    color: #6b7280;
+    display: flex;
+    align-items: center;
+}
+
+.vd__proj-engagement__card-value {
+    font-size: 20px;
+    font-weight: 800;
+    color: #1a1a2e;
+}
+
+.vd__proj-engagement__card-label {
+    font-size: 12px;
+    color: #6b7280;
+    text-align: center;
+}
+
+/* ─── Responsive: Tablet ──────────────────────────────────────────────────── */
+@media (max-width: 1200px) {
+    .vd__stats-row {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .vd__middle-row {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .vd__middle-row>*:last-child {
+        grid-column: 1 / -1;
+    }
+}
+
+@media (max-width: 1024px) {
+    .vd__body {
+        padding: 20px 24px 28px;
+    }
+
+    .vd__topbar {
+        padding: 18px 24px;
+    }
+}
+
+/* ─── Responsive: Mobile ──────────────────────────────────────────────────── */
+@media (max-width: 768px) {
+    .vd__topbar {
+        padding: 16px 20px 14px 60px;
+    }
+
+    .vd__topbar-greeting h1 {
+        font-size: 17px;
+    }
+
+    .vd__topbar-user-info {
+        display: none;
+    }
+
+    .vd__body {
+        padding: 16px 16px 24px;
+        gap: 16px;
+    }
+
+    .vd__stats-row {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+    }
+
+    .vd__middle-row {
+        grid-template-columns: 1fr;
+        gap: 14px;
+    }
+
+    .vd__bottom-row {
+        grid-template-columns: 1fr;
+        gap: 14px;
+    }
+
+    .vd__proj-engagement__cards {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    .vd__stats-row {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .vd__stat-card__value {
+        font-size: 20px;
+    }
+
+    .vd__proj-engagement__card-value {
+        font-size: 17px;
+    }
+}
