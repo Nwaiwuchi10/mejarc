@@ -11,6 +11,7 @@ import OrderDetailsModal from "@/src/components/Modals/OrderDetailsModal";
 import { COMPANY_CONTACT_INFO } from "@/src/components/CompanyContact/CompanyContact";
 interface Product {
   id: string;
+  productId?: string;
   title: string;
   category: string;
   productImage: string[];

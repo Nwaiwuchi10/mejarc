@@ -23,6 +23,7 @@ import Image from "next/image";
 
 interface Product {
   id: string;
+  productId?: string;
   title: string;
   category: string;
   productImage: string[];
