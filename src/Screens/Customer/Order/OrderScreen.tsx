@@ -41,6 +41,7 @@ interface OrderItem {
 
 interface Order {
   id: string;
+  orderNumber?: string;
   userId: string;
   grandTotal: string;
   createdAt: string;
